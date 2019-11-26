@@ -8,7 +8,7 @@ app.use(express.static(__dirname+'/assets'));
 app.get('/',(req,res)=>{
     res.sendFile('index.html');
 })
-
-app.listen(8080,()=>{
-    console.log('Server running');
+let port = 8080;
+app.listen(port,()=>{
+    console.log(`Server running at port ${port}`);
 })
