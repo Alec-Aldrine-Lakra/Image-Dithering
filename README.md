@@ -1,0 +1,1 @@
+Image Dithering using Stein Floyd Dithering algorithm applied on Image and displayed as a result on the canvas
