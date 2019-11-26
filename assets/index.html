@@ -2,26 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Display Webcam Stream</title>
- 
-<style>
-#container {
-    padding: 0px;
-	margin: 0 auto;
-    width: 100%;
-    height: 500px;
-	border: 1px #333 solid;
-    box-sizing: border-box;
-}
-#videoElement {
-	width: 400px;
-	height: 200px;
-}
-</style>
+<title>Image Dither</title>
 </head>
  
 <body>
-    <img src="original.jpg">
+    <img src="original.jpg" id="scream">
     <canvas id="myCanvas">
     </canvas>
 <script>
@@ -32,13 +17,7 @@
         var image = document.getElementById('scream');
         canvas = document.getElementById('myCanvas');
         context = canvas.getContext('2d');
-    
-         var image = new Image();
-         image.onload = function () {
-            drawImage(image);
-         }
-         image.src = './original.jpg';
-         image.crossOrigin = "Anonymous";
+        drawImage(image);
     }
 
     function drawImage(image) {
